@@ -3,5 +3,5 @@ export interface CrlclientList {
 	lastName: string;
 	name: string;
 	gender: string;
-	birthDate: Date;
+	birthDate: Date | null;
 }

@@ -5,6 +5,7 @@
 	box-shadow: 0 0 15px 0 rgba(22,22,22,0.1);
 	padding:10px 25px;
 	transition: transform 0.2s, box-shadow 0.2s;
+	cursor: pointer;
 }
 
 #client-list .div-item:hover{

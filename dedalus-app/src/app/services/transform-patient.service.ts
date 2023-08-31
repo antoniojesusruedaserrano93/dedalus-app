@@ -36,6 +36,8 @@ export class TransformPatientService {
 			// birthDate
 			if(item.resource.birthDate){
 				patient.birthDate = new Date(item.resource.birthDate);
+			}else{
+				patient.birthDate = null;
 			}
 			if(index == 0){
 				dataTransform = [patient];

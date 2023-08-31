@@ -1,5 +1,5 @@
 <div id="client-list" class="row gy-3">
-	<div class="div-item col-sm-12 col-md-6 col-lg-6 col-xl-4" *ngFor="let client of dataClientList">
+	<div *ngFor="let client of dataClientList" [routerLink]="['/clientDetail', client.id]" class="div-item col-sm-12 col-md-6 col-lg-6 col-xl-4" >
 		<div class="id">
 			<span class="title">{{client.id}}</span>
 		</div>
@@ -9,7 +9,7 @@
 		</div>
 		<div class="body title">
 			<div class="gender">Gender: <span>{{client.gender}}</span></div>
-			<div class="birthDate"><span>{{client.birthDate}}</span></div>
+			<div class="birthDate"><span>{{client.birthDate | date:'shortDate'}}</span></div>
 		</div>
 		<div class="footer">
 			<p class="link">Más información</p>

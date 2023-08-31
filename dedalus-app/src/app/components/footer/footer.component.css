@@ -1,0 +1,50 @@
+#footer .div-footer {
+    background: #26508E;
+    background: linear-gradient(90deg, #26508E 0%, #26508E 50%, #5d79aa 50%, #5d79aa 100%)
+}
+
+#footer .div-footer .container-fluid>div,footer .container-sm>div,footer .container-md>div,footer .container-lg>div,footer .container-xl>div {
+    max-width: 1440px;
+    margin: 0 auto
+}
+
+#footer .div-footer {
+    color: #fff;
+    font-size: .875rem;
+    font-weight: 300
+}
+
+#footer .div-footer img {
+    max-width: 7.5rem
+}
+
+#footer .div-footer a {
+    color: #fff;
+    font-weight: 700;
+	text-decoration: none;
+}
+
+#footer .div-footer  ul {
+    list-style: none;
+    margin: 4px 0 0;
+    padding: 0
+}
+
+#footer .div-footer ul li {
+    margin: 0 0 10px 0
+}
+
+#footer .div-footer >.row>div {
+    padding-top: 50px;
+    padding-bottom: 30px;
+    background-color: #26508E
+}
+#footer .div-footer .container>.row>div {
+    padding-top: 50px;
+    padding-bottom: 30px;
+    background-color: #26508E;
+}
+#footer .div-footer .container>.row>div:last-child {
+    background: #0d3170;
+    background: linear-gradient(90deg, #0d3170 0%, #0d3170 81%, #7483ae 81%, #7483ae 100%)
+}

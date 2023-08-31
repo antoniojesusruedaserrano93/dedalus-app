@@ -1,4 +1,4 @@
-export interface CrlPageHome {
+export interface CrlclientList {
 	id: number;
 	lastName: string;
 	name: string;

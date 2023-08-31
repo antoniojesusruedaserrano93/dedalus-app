@@ -1,15 +1,15 @@
 <div id="client-list" class="row gy-3">
-	<div class="div-item col-sm-12 col-md-6 col-lg-6 col-xl-4" >
+	<div class="div-item col-sm-12 col-md-6 col-lg-6 col-xl-4" *ngFor="let client of dataClientList">
 		<div class="id">
-			<span class="title">592578</span>
+			<span class="title">{{client.id}}</span>
 		</div>
 		<div class="head title">
-			<div class="name">Name: <span>Hanako</span></div>
-			<div class="lastName">Last name: <span>Yamada</span></div>
+			<div class="name">Name: <span>{{client.name}}</span></div>
+			<div class="lastName">Last name: <span>{{client.lastName}}</span></div>
 		</div>
 		<div class="body title">
-			<div class="gender">Gender: <span>male</span></div>
-			<div class="birthDate"><span>1919-11-03</span></div>
+			<div class="gender">Gender: <span>{{client.gender}}</span></div>
+			<div class="birthDate"><span>{{client.birthDate}}</span></div>
 		</div>
 		<div class="footer">
 			<p class="link">Más información</p>

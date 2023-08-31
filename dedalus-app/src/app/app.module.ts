@@ -8,6 +8,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { PageHomeComponent } from './pages/page-home/page-home.component';
 import { PageClientDetailComponent } from './pages/page-client-detail/page-client-detail.component';
 import { ClientListComponent } from './components/client-list/client-list.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { ClientListComponent } from './components/client-list/client-list.compon
     ClientListComponent,
   ],
   imports: [
+	HttpClientModule,
     BrowserModule,
     AppRoutingModule
   ],

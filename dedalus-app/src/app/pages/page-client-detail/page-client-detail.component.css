@@ -1,0 +1,41 @@
+#client-detail{}
+
+#client-detail .detailClient{
+	text-decoration: none;
+	box-shadow: 0 0 15px 0 rgba(22,22,22,0.1);
+	padding:10px 25px;
+	transition: transform 0.2s, box-shadow 0.2s;
+	cursor: pointer;
+}
+
+#client-detail .detailClient:hover{
+	text-decoration: none;
+	transform: translateY(-5px);
+	box-shadow: 0 0 15px 0 rgba(22,22,22,0.35);
+	transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#client-detail .detailClient .id{text-align: right; color:#000; margin-bottom: 5px;}
+
+#client-detail .detailClient .head, #client-detail .detailClient .body{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#client-detail .detailClient .head{
+	border-bottom: 1px solid #7483ae ;
+	padding-bottom: 5px;
+	margin-bottom: 5px;
+}
+#client-detail .detailClient .head, #client-detail .detailClient .body {
+	font-weight: normal;
+}
+
+#client-detail .div-item .head span, #client-detail .detailClient .body span{
+	font-weight: 900;
+}
+#client-detail .detailClient .id .title{ font-weight: normal; }
+#client-detail .detailClient .birthDate span{ font-weight: normal;}
+
+#client-detail .detailClient .footer {margin-top: 5px;}

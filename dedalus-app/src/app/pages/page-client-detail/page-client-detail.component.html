@@ -1,1 +1,17 @@
-<p>page-client-detail works!</p>
+<div id="client-detail">
+	<div class="container">
+		<div class="detailClient col-sm-12 col-md-12" >
+			<div class="id">
+				<span class="title">{{dataClientDetail.dataClient.id}}</span>
+			</div>
+			<div class="head title">
+				<div class="name">Name: <span>{{dataClientDetail.dataClient.name}}</span></div>
+				<div class="lastName">Last name: <span>{{dataClientDetail.dataClient.lastName}}</span></div>
+			</div>
+			<div class="body title">
+				<div class="gender">Gender: <span>{{dataClientDetail.dataClient.gender}}</span></div>
+				<div class="birthDate"><span>{{dataClientDetail.dataClient.birthDate | date:'shortDate'}}</span></div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -16,4 +16,8 @@ export class PatientService {
 	getPatientDetail(id: number) {
 		return this.http.get(`${this.baseUrl}/${id}`);
 	}
+	getPatientHistory(id: number){
+		return this.http.get(`${this.baseUrl}/${id}/_history`);
+	}
+	
 }

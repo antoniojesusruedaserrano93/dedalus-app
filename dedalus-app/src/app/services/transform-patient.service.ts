@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
-import { Entry, GetPatientList, Name } from '../model/services/patient';
+import { Entry, GetPatientList, Name, Resource } from '../model/services/patient';
 import { CrlclientList } from '../model/componets/ctrlClientList';
+import { HistoryClient } from '../model/page/CtrlclientDetail';
+import { HistoryService } from '../model/services/historyService';
 
 @Injectable({
   providedIn: 'root'
@@ -49,5 +51,57 @@ export class TransformPatientService {
 	});
 
 	return dataTransform;
+  }
+  
+
+  patientToCtrlClientDetail(data: Resource): CrlclientList{
+	let patient: CrlclientList = {id: 0,lastName: '',name: '',gender: '',birthDate: new Date()};
+	
+	// id
+	patient.id = Number(data.id);
+
+	// Name
+	data.name.forEach(function(dataName: Name) {
+		patient.name += (patient.name != "", " ", "" ) + dataName.family;
+		if(dataName.given)
+		dataName.given.forEach(function(dataLastName: string) {
+			patient.lastName += (patient.name != "", " ", "" ) + dataLastName;
+		});
+	});
+	
+	// gender
+	if(data.gender){
+		patient.gender += data.gender;
+	}else{
+		patient.gender = "-"
+	}
+	// birthDate
+	if(data.birthDate){
+		patient.birthDate = new Date(data.birthDate);
+	}else{
+		patient.birthDate = null;
+	}
+	return patient;
+  }
+  
+
+  patientToHistory(data: HistoryService): [HistoryClient]{
+	let dataHistory: [HistoryClient] = [{source: '', lastUpdated: new Date, text: {text: '', status: '' }}];
+	let history: HistoryClient = {source: '', lastUpdated: new Date, text: {text: '', status: '' }};
+	for (let index = 0; index < data.entry.length; index++) {
+		console.log(data.entry[index]);
+		history.lastUpdated = data.entry[index].resource.meta.lastUpdated;
+		history.source = data.entry[index].resource.meta.source;
+		history.text.status =  data.entry[index].resource.text.status;
+		history.text.text = data.entry[index].resource.text.div;
+
+		if(index == 0){
+			dataHistory = [history];
+		}else{
+			dataHistory.push(history);
+		}
+		history = {source: '', lastUpdated: new Date, text: {text: '', status: '' }};
+	}
+	return dataHistory;
   }
 }

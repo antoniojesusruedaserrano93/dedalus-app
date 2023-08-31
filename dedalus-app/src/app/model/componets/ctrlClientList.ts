@@ -4,4 +4,8 @@ export interface CrlclientList {
 	name: string;
 	gender: string;
 	birthDate: Date | null;
+	text?:{
+		div: string;
+		status: string
+	}
 }

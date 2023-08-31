@@ -1,8 +1,11 @@
 <div id="homePage">
 	<div class="container">
-		<div class="col-sm-6 col-md-8">
+		<div class="presentation-text col-sm-6 col-md-8">
 			<h2 class="title" [innerHtml]="dataHome.title"></h2>
 			<p class="text" [innerHtml]="dataHome.text"></p>
+		</div>
+		<div class="col-md-12">
+			<app-client-list></app-client-list>
 		</div>
 	</div>
 </div>

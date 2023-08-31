@@ -7,6 +7,7 @@ import { HeadComponent } from './components/head/head.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { PageHomeComponent } from './pages/page-home/page-home.component';
 import { PageClientDetailComponent } from './pages/page-client-detail/page-client-detail.component';
+import { ClientListComponent } from './components/client-list/client-list.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { PageClientDetailComponent } from './pages/page-client-detail/page-clien
     FooterComponent,
     PageHomeComponent,
     PageClientDetailComponent,
+    ClientListComponent,
   ],
   imports: [
     BrowserModule,

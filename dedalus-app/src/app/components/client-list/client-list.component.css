@@ -1,0 +1,40 @@
+#client-list{}
+
+#client-list .div-item{
+	text-decoration: none;
+	box-shadow: 0 0 15px 0 rgba(22,22,22,0.1);
+	padding:10px 25px;
+	transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#client-list .div-item:hover{
+	text-decoration: none;
+	transform: translateY(-5px);
+	box-shadow: 0 0 15px 0 rgba(22,22,22,0.35);
+	transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#client-list .div-item .id{text-align: right; color:#000; margin-bottom: 5px;}
+
+#client-list .div-item .head, #client-list .div-item .body{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#client-list .div-item .head{
+	border-bottom: 1px solid #7483ae ;
+	padding-bottom: 5px;
+	margin-bottom: 5px;
+}
+#client-list .div-item .head, #client-list .div-item .body {
+	font-weight: normal;
+}
+
+#client-list .div-item .head span, #client-list .div-item .body span{
+	font-weight: 900;
+}
+#client-list .div-item .id .title{ font-weight: normal; }
+#client-list .div-item .birthDate span{ font-weight: normal;}
+
+#client-list .div-item .footer {margin-top: 5px;}

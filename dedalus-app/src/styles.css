@@ -15,4 +15,15 @@
 	color: #323232;
 }
 
-a{}
+a, .link{
+	color: #4398b5;
+	font-weight: 800;
+	text-decoration: underline;
+	text-align: center;
+}
+
+a:hover, .link:hover {
+    color: #4398b5;
+    opacity: .5;
+    transition: opacity .25s ease-in-out;
+}

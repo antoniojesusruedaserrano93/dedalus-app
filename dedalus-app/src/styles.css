@@ -5,6 +5,10 @@
 	font-weight: 800;
 	
 }
+.title span{
+	font-weight: normal;
+	
+}
 
 .text {
 	font-size: .875rem;

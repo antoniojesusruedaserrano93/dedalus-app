@@ -1,16 +1,28 @@
 <div id="client-detail">
 	<div class="container">
 		<div class="detailClient col-sm-12 col-md-12" >
-			<div class="id">
-				<span class="title">{{dataClientDetail.dataClient.id}}</span>
+			<div class="info-client">
+				<div class="id">
+					<span class="title">{{dataClientDetail.dataClient.id}}</span>
+				</div>
+				<div class="head title">
+					<div class="name">Name: <span>{{dataClientDetail.dataClient.name}}</span></div>
+					<div class="lastName">Last name: <span>{{dataClientDetail.dataClient.lastName}}</span></div>
+				</div>
+				<div class="body title">
+					<div class="gender">Gender: <span>{{dataClientDetail.dataClient.gender}}</span></div>
+					<div class="birthDate"><span>{{dataClientDetail.dataClient.birthDate | date:'shortDate'}}</span></div>
+				</div>
 			</div>
-			<div class="head title">
-				<div class="name">Name: <span>{{dataClientDetail.dataClient.name}}</span></div>
-				<div class="lastName">Last name: <span>{{dataClientDetail.dataClient.lastName}}</span></div>
-			</div>
-			<div class="body title">
-				<div class="gender">Gender: <span>{{dataClientDetail.dataClient.gender}}</span></div>
-				<div class="birthDate"><span>{{dataClientDetail.dataClient.birthDate | date:'shortDate'}}</span></div>
+			<div class="history" *ngFor="let history of dataClientDetail.history">
+				<div class="head">
+					<div class="id-history">{{history.source}}</div>
+					<div class="lastUpdate"><span>{{ history.lastUpdated | date:'shortDate'}}</span></div>
+				</div>
+				<div class="text">
+					<div class="status title"> {{history.text.status}}</div>
+					<div class="text" [innerHtml]="history.text.text"></div>
+				</div>
 			</div>
 		</div>
 	</div>

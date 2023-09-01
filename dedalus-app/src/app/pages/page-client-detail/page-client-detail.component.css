@@ -1,19 +1,14 @@
-#client-detail{}
+#client-detail{ margin:40px 0px;}
 
 #client-detail .detailClient{
 	text-decoration: none;
 	box-shadow: 0 0 15px 0 rgba(22,22,22,0.1);
 	padding:10px 25px;
 	transition: transform 0.2s, box-shadow 0.2s;
-	cursor: pointer;
+
 }
 
-#client-detail .detailClient:hover{
-	text-decoration: none;
-	transform: translateY(-5px);
-	box-shadow: 0 0 15px 0 rgba(22,22,22,0.35);
-	transition: transform 0.2s, box-shadow 0.2s;
-}
+
 
 #client-detail .detailClient .id{text-align: right; color:#000; margin-bottom: 5px;}
 
@@ -39,3 +34,6 @@
 #client-detail .detailClient .birthDate span{ font-weight: normal;}
 
 #client-detail .detailClient .footer {margin-top: 5px;}
+
+#client-detail .history{margin-top: 20px;}
+#client-detail .status{text-align: right;}

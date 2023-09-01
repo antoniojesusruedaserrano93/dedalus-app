@@ -40,7 +40,6 @@ export class PageClientDetailComponent {
 			this.patientService.getPatientHistory(id).subscribe(
 				(response) => {
 					this.dataClientDetail.history = this.transformPatientService.patientToHistory(response as HistoryService);
-					console.log("response getPatientHistory", this.dataClientDetail.history)
 				},
 				(error) => {
 					console.error("error en la peticion")

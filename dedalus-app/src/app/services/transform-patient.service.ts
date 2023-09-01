@@ -89,11 +89,11 @@ export class TransformPatientService {
 	let dataHistory: [HistoryClient] = [{source: '', lastUpdated: new Date, text: {text: '', status: '' }}];
 	let history: HistoryClient = {source: '', lastUpdated: new Date, text: {text: '', status: '' }};
 	for (let index = 0; index < data.entry.length; index++) {
-		console.log(data.entry[index]);
-		history.lastUpdated = data.entry[index].resource.meta.lastUpdated;
-		history.source = data.entry[index].resource.meta.source;
-		history.text.status =  data.entry[index].resource.text.status;
-		history.text.text = data.entry[index].resource.text.div;
+
+		history.lastUpdated = (data.entry[index].resource.meta.lastUpdated ? data.entry[index].resource.meta.lastUpdated : new Date());
+		history.source = (data.entry[index].resource.meta.source ? data.entry[index].resource.meta.source : "");
+		history.text.status =  (data.entry[index].resource.text.status ? data.entry[index].resource.text.status : "");
+		history.text.text = (data.entry[index].resource.text.div? data.entry[index].resource.text.div : "");
 
 		if(index == 0){
 			dataHistory = [history];
